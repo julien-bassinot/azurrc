@@ -4,19 +4,19 @@ import logo from '../assets/logo_1.jpg';
 ---
 
 <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-  <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+  <nav class="container mx-auto px-4 sm:px-6 py-2 sm:py-4 flex items-center justify-between">
     <!-- Logo et Titre -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2 sm:gap-4">
       <a href="/" class="block">
         <Image
           src={logo}
           alt="Azur Racing Club"
-          class="h-12 w-auto object-contain"
+          class="h-8 sm:h-12 w-auto object-contain"
           loading="eager"
         />
       </a>
-      <a href="/" class="hidden sm:block">
-        <h3 class="text-azur">Azur Racing Club</h3>
+      <a href="/" class="block">
+        <h3 class="text-azur text-sm sm:text-base">Azur Racing Club</h3>
       </a>
     </div>
 

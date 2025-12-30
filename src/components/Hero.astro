@@ -19,41 +19,47 @@ import hero7 from '../assets/hero_7.jpg';
   <!-- Contenu qui défile par-dessus l'image -->
   <div class="hero-content relative z-10">
     <!-- Section Hero - Premier écran avec titres en haut et carousel en bas -->
-    <div class="h-screen flex flex-col justify-start px-6 pt-40 gap-8">
-      <!-- Titres et boutons dans la première moitié -->
-      <div class="container mx-auto text-center">
-        <!-- Titre principal -->
-        <h1 class="text-white-soft mb-6">
-          Azur Racing Club
-        </h1>
+    <div class="h-[100dvh] flex flex-col pt-16 sm:pt-40 px-4 sm:px-6 gap-0 sm:gap-8">
+      <!-- Titres et boutons : hauteurs vh en mobile, auto en desktop -->
+      <div class="flex flex-col flex-1 sm:h-auto">
+        <!-- h1 : 50% en mobile, auto en desktop -->
+        <div class="h-[50%] sm:h-auto flex items-center justify-center sm:mb-6">
+          <h1 class="text-white-soft text-center">
+            Azur Racing Club
+          </h1>
+        </div>
 
-        <!-- Titre secondaire -->
-        <h2 class="text-white-soft mb-8">
-          L'expérience propriétaire, nouvelle génération
-        </h2>
+        <!-- h2 : 15% en mobile, auto en desktop -->
+        <div class="h-[15%] sm:h-auto flex items-center justify-center sm:mb-8">
+          <h2 class="text-white-soft text-center max-w-xs sm:max-w-none leading-tight">
+            L'expérience propriétaire, nouvelle génération
+          </h2>
+        </div>
 
-        <!-- Boutons CTA -->
-        <div class="flex flex-wrap gap-6 justify-center">
-          <a
-            href="#presentation"
-            class="px-8 py-3 bg-white-soft text-azur hover:bg-grey-stone hover:text-white-soft transition-all duration-300 font-sans uppercase"
-          >
-            Activités
-          </a>
-          <a
-            href="https://docs.google.com/forms/d/1RYbiaEkab3f-AHpbpR70Zd3Qx1zgM4vOwCD0EK0j2n4/viewform?edit_requested=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-8 py-3 bg-transparent border-2 border-white-soft text-white-soft hover:bg-white-soft/30 transition-all duration-300 font-sans uppercase"
-          >
-            S'inscrire
-          </a>
+        <!-- Boutons : 35% en mobile, auto en desktop -->
+        <div class="h-[35%] sm:h-auto flex items-center justify-center">
+          <div class="flex gap-3 sm:gap-6 justify-center">
+            <a
+              href="#presentation"
+              class="px-4 sm:px-8 py-2 sm:py-3 bg-white-soft text-azur hover:bg-grey-stone hover:text-white-soft transition-all duration-300 font-sans uppercase text-xs sm:text-base"
+            >
+              Activités
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/1RYbiaEkab3f-AHpbpR70Zd3Qx1zgM4vOwCD0EK0j2n4/viewform?edit_requested=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-4 sm:px-8 py-2 sm:py-3 bg-transparent border-2 border-white-soft text-white-soft hover:bg-white-soft/30 transition-all duration-300 font-sans uppercase text-xs sm:text-base"
+            >
+              S'inscrire
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Carousel dans la partie basse de l'écran -->
-      <div class="w-full flex-1 flex items-end pb-8">
-        <div class="w-full">
+      <!-- Carousel : hauteur fixe en mobile, flex-1 en desktop -->
+      <div class="w-full h-[35dvh] sm:h-auto sm:flex-1 sm:flex sm:items-end sm:pb-8">
+        <div class="w-full h-full">
           <div class="embedsocial-hashtag" data-ref="3f7fd605e14e39090f3ac1ce04e02473f3cc09c9" data-lazyload="yes">
             <a class="feed-powered-by-es feed-powered-by-es-slider-img es-widget-branding" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Instagram widget">
               <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial">
