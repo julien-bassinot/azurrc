@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo_1.jpg';
+---
+
+<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo et Titre -->
+    <div class="flex items-center gap-4">
+      <a href="/" class="block">
+        <Image
+          src={logo}
+          alt="Azur Racing Club"
+          class="h-12 w-auto object-contain"
+          loading="eager"
+        />
+      </a>
+      <a href="/" class="hidden sm:block">
+        <h3 class="text-azur">Azur Racing Club</h3>
+      </a>
+    </div>
+
+    <!-- Navigation Desktop -->
+    <div class="hidden md:flex items-center gap-8 lg:gap-12">
+      <a
+        href="#agenda"
+        class="text-azur font-medium hover:text-blue-night transition-colors duration-300 uppercase text-sm"
+      >
+        Agenda
+      </a>
+      <a
+        href="#presentation"
+        class="text-azur font-medium hover:text-blue-night transition-colors duration-300 uppercase text-sm"
+      >
+        Activités
+      </a>
+      <a
+        href="https://docs.google.com/forms/d/1RYbiaEkab3f-AHpbpR70Zd3Qx1zgM4vOwCD0EK0j2n4/viewform?edit_requested=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-6 py-2 bg-blue-night text-white font-semibold rounded-md hover:bg-azur transition-all duration-300 uppercase text-sm"
+      >
+        S'inscrire
+      </a>
+    </div>
+
+    <!-- Bouton Menu Mobile -->
+    <button
+      id="mobile-menu-button"
+      class="md:hidden text-azur hover:text-blue-night transition-colors"
+      aria-label="Menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <div class="container mx-auto px-6 py-4 flex flex-col gap-4">
+      <a
+        href="#agenda"
+        class="text-azur font-medium hover:text-blue-night transition-colors duration-300 uppercase text-sm py-2"
+      >
+        Agenda
+      </a>
+      <a
+        href="#presentation"
+        class="text-azur font-medium hover:text-blue-night transition-colors duration-300 uppercase text-sm py-2"
+      >
+        Activités
+      </a>
+      <a
+        href="https://docs.google.com/forms/d/1RYbiaEkab3f-AHpbpR70Zd3Qx1zgM4vOwCD0EK0j2n4/viewform?edit_requested=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-6 py-2 bg-blue-night text-white font-semibold rounded-md hover:bg-azur transition-all duration-300 uppercase text-sm text-center"
+      >
+        S'inscrire
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Fermer le menu quand on clique sur un lien
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>

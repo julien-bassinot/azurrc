@@ -1,0 +1,49 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Azur Racing Club",
+  "url": "https://azurracingclub.com",
+  "logo": "https://azurracingclub.com/favicon.jpg",
+  "description": "Club de propriétaires de chevaux de course. Découvrez, vibrez et investissez ensemble dans l'univers des courses hippiques.",
+  "foundingDate": "2024",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": "French"
+  },
+  "sameAs": [
+    "https://www.instagram.com/azurracingclub"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressRegion": "Provence-Alpes-Côte d'Azur"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Quart-Part",
+      "price": "2500",
+      "priceCurrency": "EUR",
+      "description": "Idéal pour découvrir l'univers des courses"
+    },
+    {
+      "@type": "Offer",
+      "name": "Demi-Part",
+      "price": "5000",
+      "priceCurrency": "EUR",
+      "description": "L'équilibre parfait entre investissement et implication"
+    },
+    {
+      "@type": "Offer",
+      "name": "Part",
+      "price": "10000",
+      "priceCurrency": "EUR",
+      "description": "L'expérience complète du propriétaire"
+    }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

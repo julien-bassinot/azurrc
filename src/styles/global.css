@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette de couleurs Azur Racing Club */
+    --blue-azur: #06144f;
+    --blue-night: #0d88bd;
+    --white-soft: #F8F9FA;
+    --grey-stone: #8A8F94;
+    --charcoal: #1A1A1A;
+  }
+
+  /* Typographie - Body (Montserrat) */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--charcoal);
+  }
+
+  /* Typographie - Titres */
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 600;
+    color: var(--blue-azur);
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    color: var(--blue-night);
+  }
+
+  h3 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--blue-azur);
+  }
+
+  /* Responsive Typography */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    h1 {
+      font-size: 44px;
+      line-height: 52px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Body sizes */
+  .body-l {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .body-m {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text-small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Button text */
+  .btn-text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  /* Couleurs personnalisées */
+  .bg-azur {
+    background-color: var(--blue-azur);
+  }
+
+  .bg-blue-night {
+    background-color: var(--blue-night);
+  }
+
+  .bg-white-soft {
+    background-color: var(--white-soft);
+  }
+
+  .bg-grey-stone {
+    background-color: var(--grey-stone);
+  }
+
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+
+  .text-azur {
+    color: var(--blue-azur);
+  }
+
+  .text-blue-night {
+    color: var(--blue-night);
+  }
+
+  .text-white-soft {
+    color: var(--white-soft);
+  }
+
+  .text-grey-stone {
+    color: var(--grey-stone);
+  }
+
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+
+  .hover\:text-azur:hover {
+    color: var(--blue-azur);
+  }
+
+  .hover\:text-blue-night:hover {
+    color: var(--blue-night);
+  }
+
+  .hover\:bg-blue-night:hover {
+    background-color: var(--blue-night);
+  }
+
+  .border-azur {
+    border-color: var(--blue-azur);
+  }
+
+  .border-blue-night {
+    border-color: var(--blue-night);
+  }
+
+  .border-grey-stone {
+    border-color: var(--grey-stone);
+  }
+}

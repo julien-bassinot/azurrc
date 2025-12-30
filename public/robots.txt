@@ -1,0 +1,7 @@
+# robots.txt pour Azur Racing Club
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://azurracingclub.com/sitemap-index.xml
